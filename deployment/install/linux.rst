@@ -48,3 +48,15 @@ Sample code for a complete install with setup included is provided below.
 	export IPA=[CIDR]
 	./run-in-system.sh --help
 	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
+	
+::
+	sudo yum -y update
+	sudo yum -y install git
+	cd 
+	git clone https://github.com/digitalrebar/digitalrebar
+	ln -s digitalrebar/ digitalrebar/deploy/compose/digitalrebar
+	cd digitalrebar/deploy
+	ip -4 addr
+	export IPA=[CIDR]
+	./run-in-system.sh --help
+	sudo ./run-in-system.sh --deploy-admin=local --access=host --admin-ip=$IPA
